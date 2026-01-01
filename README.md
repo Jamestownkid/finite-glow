@@ -3,7 +3,7 @@
 A collection of ebook tools for all platforms.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux%20%7C%20iOS-lightgrey)
+![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux%20%7C%20macOS%20%7C%20iOS-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 ## 🚀 Quick Downloads
@@ -12,6 +12,7 @@ A collection of ebook tools for all platforms.
 |----------|-----|--------------|
 | **Windows** | [EBook Converter Pro](./windows/) | Double-click `RUN_APP.bat` |
 | **Linux** | [EBook Converter Pro](./linux/) | Extract tar.gz and run |
+| **macOS** | [EBook Converter Pro](./macos/) | Double-click `RUN_APP.command` |
 | **iOS** | [PageFlow](./ios/) | Open in Xcode, build & run |
 
 ---
@@ -39,6 +40,13 @@ A professional ebook batch converter with a modern GUI.
 3. Run: `./EBookConverterPro/ebook-converter-pro`
 
 **Requirements:** [Calibre](https://calibre-ebook.com/download) - `sudo apt install calibre`
+
+### macOS
+1. Download the `macos` folder
+2. Double-click `RUN_APP.command`
+3. Or build the .app: `./build_scripts/build_macos.sh`
+
+**Requirements:** Python 3.8+ (`brew install python3`) and [Calibre](https://calibre-ebook.com/download) (`brew install calibre`)
 
 ---
 
@@ -76,12 +84,18 @@ A beautiful, minimalist EPUB reader for iOS built with SwiftUI.
 ├── windows/           # Windows EBook Converter
 │   ├── RUN_APP.bat   # Quick launcher
 │   ├── src/          # Python source code
-│   └── assets/       # App icon
+│   └── assets/       # App icon (.ico)
 │
-├── linux/            # Linux EBook Converter
+├── linux/            # Linux EBook Converter (pre-built)
 │   └── EBookConverterPro-Linux.tar.gz
 │
-└── ios/              # iOS PageFlow Reader
+├── macos/            # macOS EBook Converter
+│   ├── RUN_APP.command  # Quick launcher (double-click)
+│   ├── src/          # Python source code
+│   ├── assets/       # App icon (.png)
+│   └── build_scripts/  # Build .app bundle
+│
+└── ios/              # iOS PageFlow Reader (Swift)
     ├── PageFlow.xcodeproj
     ├── PageFlow/     # SwiftUI source code
     └── docs/         # App Store assets
@@ -91,15 +105,16 @@ A beautiful, minimalist EPUB reader for iOS built with SwiftUI.
 
 ## 🛠 Building from Source
 
-### Desktop (Windows/Linux)
+### Desktop (Windows/Linux/macOS)
 ```bash
-cd windows  # or linux source
+cd windows  # or macos
 pip install -r requirements.txt
 python src/main.py  # Run directly
 
-# Or build executable:
+# Build executables:
 # Windows: build_scripts\build_windows.bat
 # Linux: ./build_scripts/build_linux.sh
+# macOS: ./build_scripts/build_macos.sh
 ```
 
 ### iOS
