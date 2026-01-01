@@ -1,0 +1,11 @@
+# EBook Converter Pro - Dependencies
+# Install with: pip install -r requirements.txt
+
+# Modern GUI framework
+customtkinter>=5.2.0
+
+# For packaging (build only)
+pyinstaller>=6.0.0
+
+# Optional: for icon conversion on build
+Pillow>=10.0.0
