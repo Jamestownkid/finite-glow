@@ -1,84 +1,129 @@
-# EBook Converter Pro
+# EBook Converter Pro & PageFlow
+
+A collection of ebook tools for all platforms.
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux%20%7C%20iOS-lightgrey)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+## 🚀 Quick Downloads
+
+| Platform | App | Instructions |
+|----------|-----|--------------|
+| **Windows** | [EBook Converter Pro](./windows/) | Double-click `RUN_APP.bat` |
+| **Linux** | [EBook Converter Pro](./linux/) | Extract tar.gz and run |
+| **iOS** | [PageFlow](./ios/) | Open in Xcode, build & run |
+
+---
+
+## 📚 EBook Converter Pro (Desktop)
 
 A professional ebook batch converter with a modern GUI.
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-lightgrey)
-
-## Download
-
-| Platform | Download | Instructions |
-|----------|----------|--------------|
-| **Windows** | [windows/](./windows/) | Double-click `RUN_APP.bat` |
-| **Linux** | [linux/](./linux/) | Extract and run `ebook-converter-pro` |
-
-## Features
-
+### Features
 - **Batch Convert** - Convert entire folders of ebooks at once
 - **18+ Formats** - EPUB, MOBI, AZW3, PDF, DOCX, TXT, HTML, and more
 - **Modern UI** - Clean dark/light theme with progress tracking
 - **Easy to Use** - Select folders, pick format, click convert
-
-## Screenshots
-
-The app features a clean, modern interface:
-- Source folder selection
-- Output folder selection  
-- Format dropdowns (convert FROM → TO)
-- Progress bar with detailed log
-- Dark/light theme toggle
-
-## Requirements
-
-### Calibre (Required)
-This app uses Calibre's `ebook-convert` for actual conversions.
-
-- **Windows**: Download from https://calibre-ebook.com/download
-- **Linux**: `sudo apt install calibre`
-- **macOS**: `brew install calibre`
-
-### For Windows Users
-Python 3.8+ is required to run directly. Or build a standalone EXE using the included build script.
-
-## Quick Start
 
 ### Windows
 1. Download the `windows` folder
 2. Double-click `RUN_APP.bat`
 3. Select folders, pick formats, convert!
 
+**Requirements:** Python 3.8+ and [Calibre](https://calibre-ebook.com/download)
+
 ### Linux
-1. Download `EBookConverterPro-Linux.tar.gz` from the `linux` folder
+1. Download `EBookConverterPro-Linux.tar.gz` from `linux/`
 2. Extract: `tar -xzf EBookConverterPro-Linux.tar.gz`
 3. Run: `./EBookConverterPro/ebook-converter-pro`
 
-## Supported Formats
+**Requirements:** [Calibre](https://calibre-ebook.com/download) - `sudo apt install calibre`
 
-| Can Convert FROM | Can Convert TO |
-|-----------------|----------------|
-| EPUB, MOBI, AZW3, AZW | EPUB, MOBI, AZW3 |
-| PDF, DOCX, TXT, RTF | PDF, DOCX, TXT, RTF |
-| HTML, HTM, FB2, ODT | HTML, FB2, ODT |
-| LIT, PDB, SNB, TCR | HTMLZ, TXTZ |
-| CBZ, CBR, CBC | CBZ |
+---
 
-## Building from Source
+## 📖 PageFlow (iOS)
 
-### Windows
-```batch
-cd windows
-pip install -r requirements.txt
-build_scripts\build_windows.bat
+A beautiful, minimalist EPUB reader for iOS built with SwiftUI.
+
+<p align="center">
+  <img src="ios/docs/icon.png" width="100" alt="PageFlow Icon">
+</p>
+
+### Features
+- **📚 Beautiful Library** - Book grid with cover art and progress tracking
+- **📖 Immersive Reading** - Distraction-free, tap-to-hide controls
+- **🎨 Custom Typography** - Multiple fonts, sizes, spacing, margins
+- **🌓 Themes** - Dark, Light, or System automatic
+- **🔒 Privacy First** - No accounts, no tracking, offline-only
+- **🆓 Open Source** - MIT licensed, forever free
+
+### Installation
+1. Clone this repo
+2. Open `ios/PageFlow.xcodeproj` in Xcode 15+
+3. Select your iPhone/iPad and press ⌘R
+
+### Requirements
+- macOS 14+ (Sonoma)
+- Xcode 15+
+- iOS 17+ device or simulator
+
+---
+
+## 📂 Repository Structure
+
+```
+├── windows/           # Windows EBook Converter
+│   ├── RUN_APP.bat   # Quick launcher
+│   ├── src/          # Python source code
+│   └── assets/       # App icon
+│
+├── linux/            # Linux EBook Converter
+│   └── EBookConverterPro-Linux.tar.gz
+│
+└── ios/              # iOS PageFlow Reader
+    ├── PageFlow.xcodeproj
+    ├── PageFlow/     # SwiftUI source code
+    └── docs/         # App Store assets
 ```
 
-### Linux
+---
+
+## 🛠 Building from Source
+
+### Desktop (Windows/Linux)
 ```bash
-# Source files are in the tar.gz if you need to rebuild
+cd windows  # or linux source
 pip install -r requirements.txt
-./build_scripts/build_linux.sh
+python src/main.py  # Run directly
+
+# Or build executable:
+# Windows: build_scripts\build_windows.bat
+# Linux: ./build_scripts/build_linux.sh
 ```
 
-## License
+### iOS
+```bash
+cd ios
+open PageFlow.xcodeproj
+# Press ⌘R in Xcode to build and run
+```
 
-Free to use and modify. Powered by [Calibre](https://calibre-ebook.com/).
+---
 
+## 📄 License
+
+All projects are open source under the [MIT License](LICENSE).
+
+---
+
+## 🙏 Credits
+
+- **EBook Converter Pro** - Powered by [Calibre](https://calibre-ebook.com/)
+- **PageFlow** - Built with SwiftUI and [ZIPFoundation](https://github.com/weichsel/ZIPFoundation)
+
+---
+
+<p align="center">
+  Made with ❤️ for book lovers everywhere
+</p>
